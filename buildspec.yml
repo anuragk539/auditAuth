@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Logging into Amazon ECR...
       - aws --version
-      - aws aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 269721309720.dkr.ecr.ap-south-1.amazonaws.com
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 269721309720.dkr.ecr.ap-south-1.amazonaws.com
       - IMAGE_NAME=auditauth
       - IMAGE_URI=269721309720.dkr.ecr.ap-south-1.amazonaws.com/auditauth
       - CONTAINER_NAME=$IMAGE_NAME
