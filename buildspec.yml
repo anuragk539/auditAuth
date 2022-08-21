@@ -18,8 +18,8 @@ phases:
     commands:
       - echo Build started on 'date'
       - echo $IMAGE_NAME
-#      - mvn compile
-#      - mvn package
+      - mvn compile
+      - mvn package
       - echo Building the Docker image...
       - docker --version
       - service docker status
@@ -27,7 +27,7 @@ phases:
       - sudo groupadd docker
       - sudo groupadd docker
       - sudo service docker start
-#      - docker build -t $IMAGE_NAME .
+      - docker build -t $IMAGE_NAME .
   post_build:
     commands:
       - echo Build completed on 'date'
