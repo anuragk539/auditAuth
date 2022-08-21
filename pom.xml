@@ -99,7 +99,6 @@
 				
 			</plugin>
 		</plugins>
-		<finalName>auditAuth</finalName>
 	</build>
 
 </project>
