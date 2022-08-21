@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:269721309720:task-definition/first-run-task-definition:1"
+        LoadBalancerInfo:
+          ContainerName: "auditmanagement"
+          ContainerPort: "8200"
+        PlatformVersion: "LATEST"
