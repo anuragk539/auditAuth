@@ -18,25 +18,10 @@ phases:
     commands:
       - echo Build started on 'date'
       - echo $IMAGE_NAME
-#      - mvn compile
+      - mvn compile
       - mvn package
       - echo Building the Docker image...
-      - sudo apt-get remove docker docker-engine docker.io
-      - sudo apt-get update
-      - sudo apt install docker.io
-      - sudo snap install docker
-      - docker --version
-      - sudo docker run hello-world
-      - sudo docker images
-      - sudo docker ps -a
-      - sudo docker ps
-      - docker --version
-      - service docker status
-      - service docker start
-#      - sudo groupadd docker
-#      - sudo groupadd docker
-#      - sudo service docker start
-#      - docker build -t $IMAGE_NAME .
+      - docker build -t $IMAGE_NAME .
   post_build:
     commands:
       - echo Build completed on 'date'
